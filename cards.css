@@ -1,0 +1,160 @@
+
+#cardsContainer
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+#pageContent
+{
+    display: inherit;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width:90%;
+}
+
+.card
+{
+	max-width: 300px;
+  padding : 10px;
+  position: relative;
+}
+
+.card img
+{
+	width: 100%;
+}
+
+.card-btn-container
+{
+  width: 100%;
+}
+
+.card-btn-container a
+{text-decoration: none;}
+
+.card-btn
+{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+    width: 60%; 
+    margin:auto;
+    min-height:45px;
+	font-size: 1.1rem;
+	color: #fff;
+    font-weight: 600;
+    border: none;
+    -webkit-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    border-radius: 50px;
+	background-size: 300% 100%;
+    background-image: -webkit-gradient(linear, left top, right top, from(#25aae1), color-stop(#40e495), color-stop(#30dd8a), to(#2bb673));
+    background-image: -webkit-linear-gradient(left, #25aae1, #40e495, #30dd8a, #2bb673);
+    background-image: -o-linear-gradient(left, #25aae1, #40e495, #30dd8a, #2bb673);
+    background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
+}
+
+.card-closing
+{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.card:hover .card-closing
+{
+	-webkit-transform: translateY(5px);
+	    -ms-transform: translateY(5px);
+	        transform: translateY(5px);
+}
+
+.card-btn:hover {
+    background-position: 100% 0;
+    -webkit-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.button, .head {
+  background: tomato;
+}
+
+.head {
+  height: 15px;
+  width: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.button {
+  height: 2px;
+  width: 15px;
+  position: relative;
+}
+
+.flip
+{
+	-webkit-transform: scaleX(-1);
+	    -ms-transform: scaleX(-1);
+	        transform: scaleX(-1);
+}
+
+
+.prjTitle
+{
+  position: absolute;
+  width: 100%;
+  background-color: rgba(7,7,7,0.8);
+  text-align: center;
+  -webkit-transition: all 500ms;
+  -o-transition: all 500ms;
+  transition: all 500ms;
+  top: 0;
+}
+
+.card>img:hover + .prjTitle
+{
+  background-color: rgba(7,7,7,0);
+  color: transparent;
+}
+
+.disabledCard::before
+{
+  content: 'Online Soon';
+  text-align: center;
+
+background-color: rgba(255,255,255,0.3);
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 1.4rem;
+font-weight: 600;
+color: #000;
+position: absolute;
+width: 50%;
+height: 50%;
+top: 25%;
+left: 25%;
+}

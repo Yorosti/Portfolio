@@ -1,0 +1,396 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.highlight
+{
+    background: rgba(255,255,255,0.09);
+    padding: 3px;
+}
+
+
+#moveIcon
+{
+    display: none;
+    -webkit-transition: all 300ms;
+    -o-transition: all 300ms;
+    transition: all 300ms;
+    width: 80%;
+    min-height: 10px;
+    background-color: #fff;
+    margin-top: 10px;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    opacity: 0.6;
+
+}
+
+#moveIcon:hover, #moveIcon:active, #moveIcon:focus
+{
+    opacity: 1;
+}
+
+
+
+#portfolioMain
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+
+#bgVan 
+{
+    z-index: -1;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('./img/yellowVan.jpg');
+    background-position: center;
+    background-size: cover;
+    position: fixed;
+}
+
+#profileHeader
+{
+    color: #000;
+    font-size: 2rem;
+    margin-top: 5vh;
+    display: inherit;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    
+    position: fixed;
+    width:100%;
+    z-index: 1;
+}
+
+#profileHeader p{
+    margin: 0;
+}
+
+#profileHeader img
+{
+    border-radius: 50%;
+    width: 150px;
+    margin: 0 10px;
+}
+
+#mainPage
+{
+    color:#fff;
+    width: 90vw;
+    height: 90vh;
+    background-color: rgba(7, 7, 7,0.998);
+    -webkit-transform: translateY(85vh);
+        -ms-transform: translateY(85vh);
+            transform: translateY(85vh);
+    margin: auto;
+    display: inherit;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    z-index: 2;
+}
+
+
+#mainPage_Menu
+{
+    font-size: calc(25px + (35 - 25) * ((100vw - 300px) / (1600 - 300)));
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+            writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+#mainPage_Menu li
+{
+    display: inline;
+    position: relative;
+    padding: 10px 5px 10px 0;
+}
+#mainPage_Menu a
+{
+    text-decoration: none !important;
+    color:rgba(255,255,255,0.9);
+}
+
+
+#mainPage_Menu a::before
+{
+    content: '';
+    border-bottom: 5px solid orange;
+    height: 3px;
+    -webkit-transition: all 400ms;
+    -o-transition: all 400ms;
+    transition: all 400ms;
+    position: absolute;
+    left: 100%;
+    width: 50%;    
+    -webkit-transform-origin: left top;    
+        -ms-transform-origin: left top;    
+            transform-origin: left top;
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+}
+
+#mainPage_Menu a:hover::before, #mainPage_Menu a.active::before
+{   
+    width: 100%;
+}
+
+
+#mainPage_Menu a.active::before 
+{
+    -webkit-transition-duration: 1s;
+         -o-transition-duration: 1s;
+            transition-duration: 1s;
+    -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+            transform: rotate(0deg)
+}
+
+
+#mainPage_Content
+{
+    width: 100%;
+    height: 100%;
+    display: inherit;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.menuBody a
+{
+    color:#fff;
+}
+
+.menuBody>h1
+{
+    text-align: right;
+}
+.menuBody>p
+{
+    margin: 50px 0;
+}
+
+.menuBody>img
+{
+    max-width: 100%;    
+}
+
+
+
+.menuBody{
+    width: 90%;
+    text-align: left;  
+    font-weight: 200;
+    font-size: 1.2rem;
+}
+
+#contactContainer
+{
+    margin: 0 auto;
+    padding: 3px;
+    
+height: 50vh;
+width: 50vw;
+    background: -webkit-gradient(linear, left top, right top, from(orange), to(purple));
+    background: -webkit-linear-gradient(left, orange, purple);
+    background: -o-linear-gradient(left, orange, purple);
+    background: linear-gradient(to right, orange, purple);
+}
+
+
+#contactReal
+{
+    font-weight: 200;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    background: rgba(7, 7, 7,0.998) ;
+}
+
+
+#contactReal .infoColumn{
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: inherit;
+    justify-content: center;
+}
+
+#contactReal #rightColumn
+{
+    margin-top: 2px;
+}
+
+#contactReal a    
+{
+    color: #fff;
+    text-decoration: none ;
+}
+#contactReal a:hover 
+{
+    text-decoration: underline ;
+}
+
+
+
+#socialContainer
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+-webkit-box-pack: end;
+    -ms-flex-pack: end;
+        justify-content: flex-end;
+}
+
+#socialContainer img
+{
+    -webkit-filter: invert(1);
+            filter: invert(1);
+    max-width:30px;
+    opacity: 0.6;
+    margin-left: 5px;
+    margin-top: 5px;
+    -webkit-transition:all 300ms;
+    -o-transition:all 300ms;
+    transition:all 300ms;
+}
+
+#socialContainer img:hover
+{
+    opacity: 0.2;
+}
+
+
+   ::selection {
+    background: #b0b0b0; /* WebKit/Blink Browsers */
+    
+  }
+
+
+
+
+
+
+
+@media only screen and (max-width: 650px) 
+{
+
+    #mainPage
+    {
+        width:100vw ;
+        height:100vh ;
+    }
+
+    #mainPage_Menu{
+        -webkit-writing-mode: horizontal-tb ;
+            -ms-writing-mode: lr-tb ;
+                writing-mode: horizontal-tb ;
+        width: 100%;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+    #mainPage_Menu nav 
+    {
+        width: 100%;
+    }
+
+    #mainPage_Menu ul
+    {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+        padding: 0;
+    }
+
+   #moveIcon
+    {
+        display: inherit ;
+    }
+
+    #mainPage_Menu a::before
+    {
+        height: 0px ;
+        left: 0 ;
+        -webkit-transform: rotate(0) ;
+            -ms-transform: rotate(0) ;
+                transform: rotate(0) ;
+    }
+
+    #mainPage_Menu a.active::before
+    {
+        -webkit-transform: rotate(90deg) ;
+            -ms-transform: rotate(90deg) ;
+                transform: rotate(90deg) ;
+        width:50% ;
+    }
+
+    #mainPage
+    {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+    #contactReal
+    {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+
+
+    #contactContainer
+    {
+        width: 80vw ;
+    }
+}
